@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(22.webp);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+canvas {
+    border: 2px solid rgb(3, 39, 68);
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 90%;
+    height: auto;
+}
+
+.toolbox {
+    background-color: rgb(2, 37, 66);
+    border: 1px solid slateblue;
+    display: flex;
+    width: 100%;
+    max-width: 804px;
+    padding: 1rem;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.toolbox>* {
+    background-color: #fff;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    height: 35px;
+    width: 35px;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toolbox>*:last-child {
+    margin-left: auto;
+}
+
+.toolbox>*:hover {
+    background-color: #362f2f;
+}
+
+#pre-loader {
+    background: #fff url(loader1.gif) no-repeat center center;
+    background-size: 20%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999;
+    /* so that it stays on top of all other elements */
+}
+
+
+/* Media Query for Mobile Devices */
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        padding: 1rem;
+        justify-content: flex-start;
+    }
+    /* Mobile-only Navbar */
+    .toolbox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px;
+        max-width: 100%;
+        margin: auto;
+    }
+    .toolbox>* {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+    /* Hide the Toolbox on Mobile */
+    .toolbox {
+        display: none;
+    }
+    canvas {
+        width: 100%;
+        height: 300px;
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .toolbox {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+    .toolbox>* {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}

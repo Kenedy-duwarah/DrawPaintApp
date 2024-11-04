@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Draw</title>
+    <style>
+        .toolbox button:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .toolbox input[type="color"]:hover {
+            box-shadow: 0 0 5px #000000;
+        }
+        
+        .toolbox button#brush {
+            background-color: #f0f0f0;
+        }
+        
+        .draggable-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .draggable {
+            cursor: move;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <div id="pre-loader"></div>
+
+
+    <div class="toolbox" style="width: 825px; height: 527px; border: 4px solid black;">
+        <button id="decrease">-</button>
+        <span id="size">10</span>
+        <button id="increase">+</button>
+        <input type="color" id="color">
+        <button id="clear">X</button>
+        <button id="eraser"><i class="fas fa-eraser"></i></button>
+        <button id="circle"><i class="fas fa-circle"></i></button>
+        <button id="square"><i class="fas fa-square"></i></button>
+        <button id="star"><i class="fas fa-star"></i></button>
+        <button id="back"><i class="fas fa-backward"></i></button>
+        <button id="brush"><i class="fas fa-paint-brush"></i></button>
+
+        <button id="save"><i class="fas fa-save"></i></button>
+    </div>
+
+
+    <canvas id="canvas" width="796" height="520" style="border: 4px solid black;"></canvas>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
